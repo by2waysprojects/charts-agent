@@ -1,0 +1,15 @@
+global:
+  environment:
+    accessKey: ""
+    clusterId: ""
+    ktrEndpoint: "http://ktr-endpoint:8080"
+
+kubeshark:
+  headless: true
+  pcapdump:
+    enabled: false
+  scripting:
+    env:
+      CLUSTER_ID: ""
+      ACCESS_KEY: ""
+      KTD_ENDPOINT: "http://ktr-endpoint:8080"

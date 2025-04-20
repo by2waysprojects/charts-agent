@@ -1,0 +1,14 @@
+apiVersion: v2
+name: mi-chart
+description: A Helm chart with dependencies for Kubeshark, Cilium, and r-agent
+version: 0.1.0
+dependencies:
+  - name: kubeshark
+    version: "52.3.91"
+    repository: "https://helm.kubeshark.co"
+  - name: cilium
+    version: "1.17.3"
+    repository: "https://helm.cilium.io"
+  - name: r-agent
+    version: "0.0.1"
+    repository: "file://charts/r-agent"

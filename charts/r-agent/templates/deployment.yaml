@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: r-agent
+  labels:
+    app: r-agent
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: r-agent
+  template:
+    metadata:
+      labels:
+        app: r-agent
+    spec:
+      containers:
+        - name: r-agent
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          env:
+            - name: ACCESS_KEY
+              value: "{{ .Values.global.environment.accessKey }}"
+            - name: CLUSTER_ID
+              value: "{{ .Values.global.environment.clusterId }}"
+            - name: KTR_ENDPOINT
+              value: "{{ .Values.global.environment.ktrEndpoint }}"
+          resources:
+            requests:
+              memory: {{ .Values.resources.requests.memory }}
+              cpu: {{ .Values.resources.requests.cpu }}
+            limits:
+              memory: {{ .Values.resources.limits.memory }}
+              cpu: {{ .Values.resources.limits.cpu }}

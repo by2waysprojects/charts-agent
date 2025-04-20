@@ -1,0 +1,6 @@
+apiVersion: v2
+name: r-agent
+description: A Helm chart for r-agent
+type: application
+version: 0.0.1
+appVersion: "0.0.1"
