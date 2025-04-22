@@ -17,6 +17,7 @@ spec:
       containers:
         - name: r-agent
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: Always
           env:
             - name: ACCESS_KEY
               value: "{{ .Values.global.environment.accessKey }}"

@@ -1,15 +1,17 @@
 global:
   environment:
-    accessKey: ""
-    clusterId: ""
-    ktrEndpoint: "http://ktr-endpoint:8080"
+    accessKey: "test"
+    clusterId: "cluster-6"
+    ktrEndpoint: "ws://k-tr-module-service.ktd.svc.cluster.local:8080/subscribe-tr"
 
 kubeshark:
   headless: true
   pcapdump:
     enabled: false
   scripting:
+    active:
+      - "send_data_to_k-td"
     env:
-      CLUSTER_ID: ""
-      ACCESS_KEY: ""
-      KTD_ENDPOINT: "http://ktr-endpoint:8080"
+      CLUSTER_ID: "custer-6"
+      ACCESS_KEY: "test"
+      KTD_ENDPOINT: "http://k-td-module-service.ktd.svc.cluster.local:8080"

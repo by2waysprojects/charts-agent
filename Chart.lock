@@ -1,6 +1,6 @@
 dependencies:
 - name: kubeshark
-  repository: https://helm.kubeshark.co
+  repository: file://charts/kubeshark
   version: 52.3.91
 - name: cilium
   repository: https://helm.cilium.io
@@ -8,5 +8,5 @@ dependencies:
 - name: r-agent
   repository: file://charts/r-agent
   version: 0.0.1
-digest: sha256:a72c3319f3b8f5efb78e38bc77950d87fae1697f47f57add818662f0a289995b
-generated: "2025-04-20T01:22:20.6708624+02:00"
+digest: sha256:6b45c04dc71931476e7f516d42cc16a89f849d5044e12fa4f7e89cd00a39e879
+generated: "2025-04-22T20:18:04.0451028+02:00"

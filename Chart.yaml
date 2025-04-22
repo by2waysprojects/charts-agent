@@ -5,7 +5,7 @@ version: 0.1.0
 dependencies:
   - name: kubeshark
     version: "52.3.91"
-    repository: "https://helm.kubeshark.co"
+    repository: "file://charts/kubeshark"
   - name: cilium
     version: "1.17.3"
     repository: "https://helm.cilium.io"
